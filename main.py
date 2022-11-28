@@ -10,15 +10,16 @@ import requests
 # class PostRestMethod(): //можно через класс(если будем расширять(хотя это противоречит принципу Open/Close),
 # но лучше конечно же через обычные переменные)
 
-response = requests.post('https://httpbin.org/post', json={'name': 'test', 'time': '17:46 26.11.2022'})
+response = requests.post('https://httpbin.org/post', json={'name': 'test', 'time': '18:37 26.11.2022'})
 json_response = response.json()
 datetime = datetime.now()
+
 
 if datetime == response.request.body:
     print('Выполнение команды')
     if response.status_code == 200:
-            print('Success!')
+        print('Success!')
     elif response.status_code == 404:
-            print('Not Found.')
+        print('Not Found.')
 else:
-    print("иду в жопу")
+    print("иди в жопу")
